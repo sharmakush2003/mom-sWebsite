@@ -678,6 +678,7 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
+
 /* FAQ Section */
 .faq-container {
     max-width: 800px;
@@ -728,7 +729,8 @@ footer {
 }
 
 .faq-item.active .faq-answer {
-    max-height: 200px; /* Adjust as needed */
+    max-height: 200px;
+    /* Adjust as needed */
 }
 
 .faq-item.active .faq-question .icon {
@@ -812,7 +814,8 @@ footer {
 }
 
 .faq-item.active .faq-answer {
-    max-height: 200px; /* Adjust as needed */
+    max-height: 200px;
+    /* Adjust as needed */
 }
 
 .faq-item.active .faq-question .icon {
@@ -845,171 +848,135 @@ footer {
     color: var(--primary-color);
 }
 
+/* Mobile Optimization (Small Phones) */
+@media (max-width: 480px) {
 
-/* FAQ Section */
-.faq-container {
-    max-width: 800px;
-    margin: 0 auto;
+    /* Typography Adjustments */
+    .hero h1 {
+        font-size: 2.5rem;
+        /* Smaller heading for mobile */
+        line-height: 1.2;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        /* Smaller section titles */
+        margin-bottom: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Layout Adjustments */
+    .section {
+        padding: 4rem 5%;
+        /* Reduce section padding */
+    }
+
+    .hero {
+        padding-top: 100px;
+        /* Adjust top padding for fixed nav */
+        padding-bottom: 3rem;
+    }
+
+    /* Navigation */
+    .navbar {
+        padding: 1rem 5%;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        /* Reduce gap between links */
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+        /* Smaller nav text */
+    }
+
+    /* Product Grid */
+    .gallery-grid,
+    .product-grid {
+        grid-template-columns: 1fr;
+        /* Force single column */
+        gap: 2rem;
+    }
+
+    .product-card {
+        margin: 0 10px;
+        /* Add side margin */
+    }
+
+    .product-img {
+        height: 200px;
+        /* Slightly smaller images */
+    }
+
+    /* Order Form */
+    .order-container {
+        gap: 3rem;
+    }
+
+    .order-summary,
+    .order-form {
+        padding: 1.5rem;
+        /* Reduce padding inside containers */
+        border-radius: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px;
+        /* Comfortable touch target */
+    }
+
+    /* Buttons */
+    .btn-primary,
+    .btn-sm {
+        width: 100%;
+        /* Full width buttons for easy tapping */
+        text-align: center;
+        display: block;
+    }
+
+    .price-row {
+        flex-direction: column;
+        /* Stack price and add button */
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .price-row button {
+        width: 100%;
+    }
+
+    /* Notification */
+    .notification {
+        width: 90%;
+        /* Full width notification */
+        left: 5%;
+        right: auto;
+        top: 80px;
+        text-align: center;
+    }
+
+    /* Modal */
+    .modal-content {
+        padding: 2rem;
+        width: 95%;
+    }
+
+    .modal-header h2 {
+        font-size: 2rem;
+    }
+
+    .modal-icon {
+        font-size: 3rem;
+    }
 }
-
-.faq-item {
-    margin-bottom: 1rem;
-    border: 1px solid #eee;
-    border-radius: 10px;
-    overflow: hidden;
-    background: var(--white);
-    box-shadow: var(--shadow);
-}
-
-.faq-question {
-    width: 100%;
-    text-align: left;
-    padding: 1.5rem;
-    background: none;
-    border: none;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--text-color);
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: var(--transition);
-}
-
-.faq-question:hover {
-    background: #fdfbf7;
-    color: var(--primary-color);
-}
-
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    background: #fdfbf7;
-}
-
-.faq-answer p {
-    padding: 1.5rem;
-    color: #555;
-    line-height: 1.6;
-}
-
-.faq-item.active .faq-answer {
-    max-height: 200px; /* Adjust as needed */
-}
-
-.faq-item.active .faq-question .icon {
-    transform: rotate(45deg);
-}
-
-.icon {
-    font-size: 1.5rem;
-    transition: transform 0.3s ease;
-}
-
-/* Terms Section */
-.terms-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-    border: 1px solid #eee;
-}
-
-.terms-container p {
-    margin-bottom: 1rem;
-    color: #555;
-    font-size: 0.95rem;
-}
-
-.terms-container strong {
-    color: var(--primary-color);
-}
-
-
-/* FAQ Section */
-.faq-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.faq-item {
-    margin-bottom: 1rem;
-    border: 1px solid #eee;
-    border-radius: 10px;
-    overflow: hidden;
-    background: var(--white);
-    box-shadow: var(--shadow);
-}
-
-.faq-question {
-    width: 100%;
-    text-align: left;
-    padding: 1.5rem;
-    background: none;
-    border: none;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--text-color);
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: var(--transition);
-}
-
-.faq-question:hover {
-    background: #fdfbf7;
-    color: var(--primary-color);
-}
-
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    background: #fdfbf7;
-}
-
-.faq-answer p {
-    padding: 1.5rem;
-    color: #555;
-    line-height: 1.6;
-}
-
-.faq-item.active .faq-answer {
-    max-height: 200px; /* Adjust as needed */
-}
-
-.faq-item.active .faq-question .icon {
-    transform: rotate(45deg);
-}
-
-.icon {
-    font-size: 1.5rem;
-    transition: transform 0.3s ease;
-}
-
-/* Terms Section */
-.terms-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-    border: 1px solid #eee;
-}
-
-.terms-container p {
-    margin-bottom: 1rem;
-    color: #555;
-    font-size: 0.95rem;
-}
-
-.terms-container strong {
-    color: var(--primary-color);
-}
-
