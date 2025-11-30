@@ -851,104 +851,122 @@ footer {
 /* Mobile Optimization (Small Phones) */
 @media (max-width: 480px) {
 
-    /* Typography Adjustments */
-    .hero h1 {
-        font-size: 2.5rem;
-        /* Smaller heading for mobile */
-        line-height: 1.2;
+    /* Navigation - Stacked Layout */
+    .navbar {
+        padding: 1rem 5%;
+        flex-direction: column;
+        gap: 0.8rem;
+        background: rgba(255, 253, 208, 0.98);
+        /* More opaque on mobile */
     }
 
-    .section-title {
-        font-size: 2.2rem;
-        /* Smaller section titles */
-        margin-bottom: 2.5rem;
+    .logo {
+        font-size: 1.8rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+        width: 100%;
+        justify-content: center;
+        padding-bottom: 0.5rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding-top: 160px;
+        /* More space for stacked nav */
+        padding-bottom: 3rem;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .hero-content {
+        margin-bottom: 3rem;
+        padding: 0 1rem;
+    }
+
+    .hero-tag {
+        font-size: 0.8rem;
+        padding: 4px 12px;
+        margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
     }
 
     .hero p {
         font-size: 1rem;
         margin-bottom: 2rem;
+        padding: 0 5px;
     }
 
-    /* Layout Adjustments */
+    .btn-primary {
+        width: auto;
+        min-width: 200px;
+        padding: 12px 30px;
+        font-size: 1rem;
+        display: inline-block;
+    }
+
+    /* Hero Visual */
+    .hero-visual {
+        width: 100%;
+        height: auto;
+        margin-top: 1rem;
+    }
+
+    .hero-circle {
+        width: 280px;
+        height: 280px;
+    }
+
+    .hero-img {
+        width: 80%;
+        max-width: 260px;
+        transform: rotate(0deg);
+        /* Straighten image */
+        margin: 0 auto;
+    }
+
+    /* General Layout */
     .section {
-        padding: 4rem 5%;
-        /* Reduce section padding */
+        padding: 4rem 1.5rem;
     }
 
-    .hero {
-        padding-top: 100px;
-        /* Adjust top padding for fixed nav */
-        padding-bottom: 3rem;
-    }
-
-    /* Navigation */
-    .navbar {
-        padding: 1rem 5%;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-    }
-
-    .nav-links {
-        gap: 1rem;
-        /* Reduce gap between links */
-    }
-
-    .nav-links a {
-        font-size: 0.9rem;
-        /* Smaller nav text */
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+        width: 100%;
     }
 
     /* Product Grid */
     .gallery-grid,
     .product-grid {
         grid-template-columns: 1fr;
-        /* Force single column */
         gap: 2rem;
+        padding: 0;
     }
 
     .product-card {
-        margin: 0 10px;
-        /* Add side margin */
+        margin: 0;
     }
 
     .product-img {
-        height: 200px;
-        /* Slightly smaller images */
+        height: 220px;
     }
 
-    /* Order Form */
-    .order-container {
-        gap: 3rem;
-    }
-
-    .order-summary,
-    .order-form {
-        padding: 1.5rem;
-        /* Reduce padding inside containers */
-        border-radius: 20px;
-    }
-
-    .form-group input,
-    .form-group textarea {
-        padding: 12px;
-        /* Comfortable touch target */
-    }
-
-    /* Buttons */
-    .btn-primary,
-    .btn-sm {
-        width: 100%;
-        /* Full width buttons for easy tapping */
-        text-align: center;
-        display: block;
-    }
-
+    /* Price Options */
     .price-row {
         flex-direction: column;
-        /* Stack price and add button */
-        gap: 0.5rem;
+        gap: 0.8rem;
         text-align: center;
     }
 
@@ -956,27 +974,35 @@ footer {
         width: 100%;
     }
 
+    /* Order Form */
+    .order-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .order-summary,
+    .order-form {
+        padding: 1.5rem;
+    }
+
     /* Notification */
     .notification {
         width: 90%;
-        /* Full width notification */
         left: 5%;
         right: auto;
-        top: 80px;
+        top: 20px;
+        /* Lower than nav */
         text-align: center;
+        font-size: 0.9rem;
     }
 
     /* Modal */
     .modal-content {
-        padding: 2rem;
-        width: 95%;
+        padding: 2rem 1.5rem;
+        width: 90%;
     }
 
     .modal-header h2 {
-        font-size: 2rem;
-    }
-
-    .modal-icon {
-        font-size: 3rem;
+        font-size: 1.8rem;
     }
 }
