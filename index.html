@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mom's Special Achaar - Premium Homemade Pickles</title>
+    <meta name="description"
+        content="Authentic homemade pickles (Achaar) made with traditional recipes and love. Order now!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Notification Toast -->
+    <div id="notification" class="notification">Item added to cart! 🛒</div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#" class="logo">Mom's Achaar</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Collection</a></li>
+            <li><a href="#order">Order</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">Handcrafted with Love</span>
+            <h1>Taste the <br><span>Legacy of Flavor</span></h1>
+            <p>Experience the authentic taste of tradition. Homemade, preservative-free, and
+                bursting with the finest spices.</p>
+            <a href="#products" class="btn-primary">Explore Collection</a>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-circle"></div>
+            <img src="Images/Mango Achar.jpg" alt="Premium Mango Achar" class="hero-img">
+        </div>
+    </header>
+
+    <!-- Gallery Section (Product Grid) -->
+<section id="products" class="section">
+    <h2 class="section-title">Featured Masterpieces</h2>
+    <div class="gallery-grid">
+
+        <!-- Mango Achar -->
+        <div class="product-card">
+            <img src="Images/Mango Achar.jpg" alt="Mango Achar" class="product-img">
+            <div class="product-info">
+                <h3 class="product-title">Mango Achar (आम का अचार)</h3>
+                <p class="product-desc">Hand-cut raw mangoes sun-dried and matured in a rich blend of mustard oil,
+                    fenugreek, and fennel seeds.</p>
+                <div class="price-options">
+                    <div class="price-row">
+                        <span>500g - <span class="price-tag">₹250</span></span>
+                        <button class="btn-sm" onclick="addToCart(1, '500g')">Add</button>
+                    </div>
+                    <div class="price-row">
+                        <span>1kg - <span class="price-tag">₹480</span></span>
+                        <button class="btn-sm" onclick="addToCart(1, '1kg')">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mirchi Achar -->
+        <div class="product-card">
+            <img src="Images/Mirchi Achar.jpg" alt="Mirchi Achar" class="product-img">
+            <div class="product-info">
+                <h3 class="product-title">Mirchi Achar (मिर्च का अचार)</h3>
+                <p class="product-desc">Fresh green chillies slit and stuffed with a tangy, spicy masala mix. A
+                    fiery companion to your parathas.</p>
+                <div class="price-options">
+                    <div class="price-row">
+                        <span>500g - <span class="price-tag">₹200</span></span>
+                        <button class="btn-sm" onclick="addToCart(2, '500g')">Add</button>
+                    </div>
+                    <div class="price-row">
+                        <span>1kg - <span class="price-tag">₹380</span></span>
+                        <button class="btn-sm" onclick="addToCart(2, '1kg')">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Adrak Achar -->
+        <div class="product-card">
+            <img src="Images/Adrak Achar.jpg" alt="Adrak Achar" class="product-img">
+            <div class="product-info">
+                <h3 class="product-title">Adrak Achar (अदरक का अचार)</h3>
+                <p class="product-desc">Tender ginger strips pickled in lemon juice and spices. A zesty, digestive
+                    aid that warms the soul.</p>
+                <div class="price-options">
+                    <div class="price-row">
+                        <span>500g - <span class="price-tag">₹300</span></span>
+                        <button class="btn-sm" onclick="addToCart(3, '500g')">Add</button>
+                    </div>
+                    <div class="price-row">
+                        <span>1kg - <span class="price-tag">₹580</span></span>
+                        <button class="btn-sm" onclick="addToCart(3, '1kg')">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Amla Achar -->
+        <div class="product-card">
+            <img src="Images/Amla Achar.jpg" alt="Amla Achar" class="product-img">
+            <div class="product-info">
+                <h3 class="product-title">Amla Achar (आंवला का अचार)</h3>
+                <p class="product-desc">Whole Indian gooseberries steeped in spices. A perfect balance of sour and
+                    spicy, packed with tradition.</p>
+                <div class="price-options">
+                    <div class="price-row">
+                        <span>500g - <span class="price-tag">₹280</span></span>
+                        <button class="btn-sm" onclick="addToCart(4, '500g')">Add</button>
+                    </div>
+                    <div class="price-row">
+                        <span>1kg - <span class="price-tag">₹540</span></span>
+                        <button class="btn-sm" onclick="addToCart(4, '1kg')">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Haldi Achar -->
+        <div class="product-card">
+            <img src="Images/Haldi Achar.jpg" alt="Haldi Achar" class="product-img">
+            <div class="product-info">
+                <h3 class="product-title">Haldi Achar (हल्दी का अचार)</h3>
+                <p class="product-desc">Fresh turmeric roots pickled to perfection. An earthy, immunity-boosting
+                    delight with a golden hue.</p>
+                <div class="price-options">
+                    <div class="price-row">
+                        <span>500g - <span class="price-tag">₹350</span></span>
+                        <button class="btn-sm" onclick="addToCart(5, '500g')">Add</button>
+                    </div>
+                    <div class="price-row">
+                        <span>1kg - <span class="price-tag">₹680</span></span>
+                        <button class="btn-sm" onclick="addToCart(5, '1kg')">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lasson Achar -->
+        <div class="product-card">
+            <img src="Images/Lasson Achar.jpg " alt="Ginger Achar" class="product-img">
+            <div class="product-info">
+                <h3 class="product-title">Garlic Achar (लहसुन का अचार)</h3>
+                <p class="product-desc">Whole garlic cloves slow-matured in mustard oil and red chilli powder. A
+                    robust, pungent flavor.</p>
+                <div class="price-options">
+                    <div class="price-row">
+                        <span>500g - <span class="price-tag">₹320</span></span>
+                        <button class="btn-sm" onclick="addToCart(6, '500g')">Add</button>
+                    </div>
+                    <div class="price-row">
+                        <span>1kg - <span class="price-tag">₹620</span></span>
+                        <button class="btn-sm" onclick="addToCart(6, '1kg')">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Why Choose Us -->
+
+    <section class="section">
+        <h2 class="section-title">The Art of Pickle Making</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🌿</div>
+                <h3>100% Natural</h3>
+                <p>Pure ingredients, no preservatives. Just nature's goodness in a jar.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👵</div>
+                <h3>Heirloom Recipes</h3>
+                <p>Secret blends of spices passed down through generations.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">❤️</div>
+                <h3>Small Batches</h3>
+                <p>Handcrafted in small quantities to ensure perfection in every jar.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Order Section -->
+    <section id="order" class="section order-section">
+        <h2 class="section-title">Secure Your Jar</h2>
+        <div class="order-container">
+            <div class="order-summary">
+                <h3>Your Selection</h3>
+                <div id="cart-items">
+                    <p class="empty-cart-msg">Your basket is empty. Select your favorites.</p>
+                </div>
+                <div class="total-price">Total: ₹<span id="total-amount">0</span></div>
+            </div>
+
+            <form id="order-form" class="order-form">
+                <h3>Delivery Details</h3>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required placeholder="e.g. Rahul Sharma">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required placeholder="e.g. 98765 43210">
+                </div>
+                <div class="form-group">
+                    <label for="address">Delivery Address</label>
+                    <textarea id="address" rows="3" required placeholder="Full address with pincode"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="instructions">Special Requests</label>
+                    <textarea id="instructions" rows="4"
+                        placeholder="Any specific preferences? (e.g. Extra oil, Less spicy)"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
+                            <input type="radio" name="payment" value="Online Banking" checked> Online Banking
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
+                            <input type="radio" name="payment" value="Cash On Delivery"> Cash On Delivery
+                        </label>
+                    </div>
+                </div>
+                <div style="margin-bottom: 1.5rem; font-size: 0.9rem; color: #666;">
+                    <strong>Estimated Time of Delivery:</strong> 7-10 Days (based on quantity)
+                </div>
+                <button type="submit" class="btn-primary full-width">Send Order via
+                    WhatsApp</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Terms & Conditions -->
+    <section id="terms" class="section terms-section">
+        <h2 class="section-title">Terms & Conditions</h2>
+        <div class="terms-container">
+            <p><strong>Returns & Refunds:</strong> Due to the nature of our food products, we do not accept returns.
+                However, if you receive a damaged jar, please contact us within 24 hours with photos for a replacement
+                or refund.</p>
+            <p><strong>Privacy:</strong> Your personal information is used only for order processing and delivery. We do
+                not share your data with third parties.</p>
+            <p><strong>Allergens:</strong> Our products are made in a facility that handles nuts, mustard, and spices.
+                Please check ingredients carefully if you have allergies.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mom's Homemade Achaar. Preserving Tradition.</p>
+        <div style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+            <p style="margin-bottom: 0.5rem;">Owner: <strong>Vijay Laxmi Sharma</strong></p>
+            <p>Designed & Developed by: <br> <strong>Lav Sharma</strong> (+91 7597901057) &
+                <strong>Kush Sharma</strong> (+91 8233816674)
+            </p>
+        </div>
+    </footer>
+
+    <!-- Welcome Modal -->
+    <div id="welcome-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            <div class="modal-header">
+                <span class="modal-icon">🙏</span>
+                <h2>नमस्ते!</h2>
+            </div>
+            <div class="modal-body">
+                <h3>Mom's Special Achaar में आपका स्वागत है! ❤️</h3>
+                <p>घर जैसा स्वाद, माँ का प्यार... अब बस एक क्लिक दूर! 🏡✨</p>
+                <p>शुद्ध, ताज़ा और बिना किसी प्रिजर्वेटिव के। <br>असली स्वाद का आनंद लें! 🌶️🍋</p>
+                <button class="btn-primary" onclick="closeModal()">स्वाद चखें (Explore)</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
